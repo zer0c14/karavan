@@ -2,14 +2,15 @@
 - route:
     id: webhook_handle_server
     from:
-      uri: platform-http:/hello
+      uri: platform-http
       id: hello_route
       parameters:
         httpMethodRestrict: GET
+        path: /hello
       steps:
         - setBody:
             id: setBody-dffc
             expression:
               simple:
-                expression: Hello Innostage!
+                expression: Hello Innostage!!!
                 id: simple-ce4a
