@@ -1,0 +1,15 @@
+- routeConfiguration: {}
+- route:
+    id: webhook_handle_server
+    from:
+      uri: platform-http:/hello
+      id: hello_route
+      parameters:
+        httpMethodRestrict: GET
+      steps:
+        - setBody:
+            id: setBody-dffc
+            expression:
+              simple:
+                expression: Hello Innostage!
+                id: simple-ce4a
