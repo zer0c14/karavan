@@ -7,10 +7,10 @@
         httpMethodRestrict: GET
         path: /hello
       steps:
+        - to:
+            uri: https://api.github.com/repos/nginx/nginx/commits
+            id: to-d8bf
         - setBody:
-            id: setBody-dffc
-            expression:
-              simple:
-                expression: Hello Innostage!!!
-                id: simple-ce4a
+            id: setBody-4164
+            expression: {}
 - routeConfiguration: {}
