@@ -14,7 +14,7 @@
             parameters:
               protocol: https
               host: api.github.com
-              path: /repos/nginx/nginx/commits?
+              path: repos/nginx/nginx/commits?c=
         - setBody:
             id: setBody-afac
             expression:
