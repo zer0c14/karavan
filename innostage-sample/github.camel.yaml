@@ -3,21 +3,21 @@
     id: webhook_handle_server
     from:
       uri: platform-http
-      id: hello_route
+      id: entrypoint
       parameters:
         httpMethodRestrict: GET
-        path: /hello
+        path: /commits
       steps:
         - to:
             uri: netty-http
-            id: to-c59c
+            id: github_api
             parameters:
               protocol: https
               host: api.github.com
-              path: repos/nginx/nginx/commits
+              path: repos/nginx/nginx
             pattern: InOnly
         - setBody:
-            id: setBody-afac
+            id: response
             expression:
               simple:
                 expression: ${body}
