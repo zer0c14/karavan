@@ -13,8 +13,7 @@
             id: github_api
             parameters:
               protocol: https
-              host: api.github.com
-              path: repos/nginx/nginx
+              host: ya.ru
             pattern: InOnly
         - setBody:
             id: response
