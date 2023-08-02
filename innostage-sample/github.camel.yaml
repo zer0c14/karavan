@@ -1,3 +1,4 @@
+- routeConfiguration: {}
 - route:
     id: webhook_handle_server
     from:
@@ -8,9 +9,15 @@
         path: /hello
       steps:
         - to:
-            uri: https://api.github.com/repos/nginx/nginx/commits
-            id: to-d8bf
+            uri: netty-http
+            id: to-c59c
+            parameters:
+              protocol: https
+              host: api.github.com
+              path: /repos/nginx/nginx/commits
         - setBody:
-            id: setBody-4164
-            expression: {}
-- routeConfiguration: {}
+            id: setBody-afac
+            expression:
+              simple:
+                expression: ${body}
+                id: simple-664b
