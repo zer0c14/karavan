@@ -13,7 +13,9 @@
             id: to-c59c
             parameters:
               protocol: https
-              host: api.github.com/repos/nginx/nginx/commits
+              host: api.github.com
+              path: repos/nginx/nginx/commits
+            pattern: InOnly
         - setBody:
             id: setBody-afac
             expression:
