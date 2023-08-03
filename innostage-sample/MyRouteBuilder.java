@@ -34,7 +34,7 @@ public class MyRouteBuilder extends RouteBuilder {
   }
 
   public void configure() {
-    from("netty-http:http://localhost:8080/pt-af/v1/create-session")
+    from("netty-http:http://localhost:8000/pt-af/v1/create-session")
         .process(exchange -> exchange.setMessage(new DefaultMessage(exchange)))
         .to(
             "netty-http:https://10.70.19.2:8443/login"
