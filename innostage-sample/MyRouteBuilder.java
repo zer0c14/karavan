@@ -1,5 +1,3 @@
-// camel-k: dependency=mvn:org.apache.camel:applicacamel-tagsouption:3.16.0
-
 import static javax.xml.bind.DatatypeConverter.printHexBinary;
 
 import io.netty.handler.codec.http.HttpMethod;
