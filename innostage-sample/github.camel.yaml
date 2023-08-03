@@ -1,4 +1,3 @@
-- routeConfiguration: {}
 - route:
     id: webhook_handle_server
     from:
@@ -21,3 +20,7 @@
               simple:
                 expression: ${body}
                 id: simple-664b
+        - to:
+            uri: telegram
+            id: to-4f9a
+- routeConfiguration: {}
