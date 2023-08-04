@@ -1,0 +1,29 @@
+- route:
+    id: route-033e
+    from:
+      uri: platform-http
+      id: from-2505
+      parameters:
+        path: /
+      steps:
+        - choice:
+            when:
+              - id: when-3b43
+                expression:
+                  simple:
+                    expression: ${headers.command} == "ping"
+                    id: simple-36c7
+                steps:
+                  - setBody:
+                      id: setBody-e38d
+                      expression:
+                        simple:
+                          expression: pong
+                          id: simple-efaf
+            id: choice-99a9
+            otherwise:
+              id: otherwise-93e0
+              steps:
+                - throwException:
+                    id: throwException-0f1c
+                    exceptionType: java.lang.Exception
