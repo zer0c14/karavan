@@ -45,9 +45,11 @@ public class DemoRouteBuilder extends RouteBuilder {
         .setHeader("exponent", xpath("//input[@name='public_key_e']/@value").convertToString())
         .process(
             exchange -> {
-              throw new Error();
               var modulus = exchange.getIn().getHeader("modulus", String.class);
               var exponent = exchange.getIn().getHeader("exponent", String.class);
+              if (modulus != "hey") {
+                throw new Exception();
+              }
               exchange.getIn().setHeader("password", getEncryptedPassword(modulus, exponent));
             })
 
