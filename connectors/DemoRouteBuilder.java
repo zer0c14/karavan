@@ -32,7 +32,7 @@ public class DemoRouteBuilder extends RouteBuilder {
   }
 
   public void configure() {
-    from("netty-http:http://0.0.0.0:12345/pt-af/v1/create-session")
+    from("netty-http:http://0.0.0.0:9000/pt-af/v1/create-session")
         .process(exchange -> exchange.setMessage(new DefaultMessage(exchange)))
         .to(
             "netty-http:https://10.70.19.2:8443/login"
