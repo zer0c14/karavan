@@ -47,9 +47,6 @@ public class DemoRouteBuilder extends RouteBuilder {
             exchange -> {
               var modulus = exchange.getIn().getHeader("modulus", String.class);
               var exponent = exchange.getIn().getHeader("exponent", String.class);
-              if (modulus != "hey") {
-                throw new Exception();
-              }
               exchange.getIn().setHeader("password", getEncryptedPassword(modulus, exponent));
             })
 
