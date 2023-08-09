@@ -24,6 +24,9 @@
             otherwise:
               id: otherwise-93e0
               steps:
-                - throwException:
-                    id: throwException-0f1c
-                    exceptionType: java.lang.Exception
+                - setBody:
+                    id: setBody-db95
+                    expression:
+                      simple:
+                        expression: ERROR
+                        id: simple-aabe
