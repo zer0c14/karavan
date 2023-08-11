@@ -1,16 +1,12 @@
 - route:
-    id: route-04f5
+    id: route-ab73
     from:
-      uri: netty-http
-      id: from-3346
-      parameters:
-        protocol: http
-        host: 0.0.0.0
-        port: 9000
+      uri: timer
+      id: from-f2de
       steps:
-        - setBody:
-            id: setBody-a85b
-            expression:
-              simple:
-                expression: fsfsdfds
-                id: simple-3acb
+        - log:
+            message: ${body}
+            id: log-61ae
+            description: fsdfsdfsdfsd
+            logName: fsdfsd
+            loggingLevel: TRACE
