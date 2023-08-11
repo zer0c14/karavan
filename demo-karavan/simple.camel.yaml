@@ -1,12 +1,16 @@
 - route:
-    id: route-de9f
+    id: route-04f5
     from:
-      uri: platform-http
-      id: from-0be9
+      uri: netty-http
+      id: from-3346
+      parameters:
+        protocol: http
+        host: 0.0.0.0
+        port: 9000
       steps:
         - setBody:
-            id: setBody-1c40
+            id: setBody-a85b
             expression:
               simple:
-                expression: Hello fksalfjsdjfksad!!!!
-                id: simple-fd53
+                expression: fsfsdfds
+                id: simple-3acb
