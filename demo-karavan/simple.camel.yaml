@@ -3,10 +3,16 @@
     from:
       uri: timer
       id: from-f2de
+      parameters:
+        timerName: demo
       steps:
+        - setBody:
+            id: setBody-837e
+            expression:
+              simple:
+                expression: fsdfsd
+                id: simple-d433
         - log:
             message: ${body}
-            id: log-61ae
-            description: fsdfsdfsdfsd
-            logName: fsdfsd
-            loggingLevel: TRACE
+            id: log-0371
+            description: fsfsdfsd
